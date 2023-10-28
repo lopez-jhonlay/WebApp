@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #1B1B1B;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-areas: 
+            "logo title title"
+            "report report report";
+    border-bottom: 2px solid #555555;
+}
+
+.logo,
+.title a,
+.report a{
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #EBEB5E;
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report {
+    grid-area: report;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report a,
+.title a  {
+    text-decoration: none;
+}
+
+.report a:hover,
+.title a:hover {
+    color: #EBEB5E;
+}
+
+main p {
+    text-align: center;
+    margin: 20px 0;
+    color:#CCCCCC;
+}
+
+.selection-title {
+    font-size: 1.5rem;
+}
+
+.selection-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fibonacci {
+    width: 75%;
+    padding: 70px 20px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #2B2B2B;
+    border-radius: 10px;
+}
+
+.fibonacci input {
+    width: 100%;
+    padding: 10px;
+}
+
+.fibonacci button {
+    padding: 5px 10px;
+}
+
+@media (min-width: 480px) {
+    header {
+        grid-template-areas: 
+        "logo title report";
+    }
+}
